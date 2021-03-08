@@ -1,0 +1,11 @@
+[Unit]
+Description=Restore the student folder
+
+[Service]
+WorkingDirectory=/opt
+Type=forking
+ExecStart=/bin/bash /opt/restoreStudent.bash
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
